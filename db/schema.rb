@@ -24,10 +24,11 @@ ActiveRecord::Schema.define(version: 0) do
   add_index "paths", ["share_id"], name: "share_id", using: :btree
 
   create_table "querys", primary_key: "file_id", force: true do |t|
-    t.string  "file_name", limit: 512, null: false
-    t.integer "path_id",               null: false
-    t.integer "share_id",              null: false
-    t.integer "server_id",             null: false
+    t.string  "file_name",       limit: 512, null: false
+    t.integer "file_size_bytes", limit: 8,   null: false
+    t.integer "path_id",                     null: false
+    t.integer "share_id",                    null: false
+    t.integer "server_id",                   null: false
   end
 
   add_index "querys", ["file_name", "path_id", "share_id", "server_id"], name: "files_index", length: {"file_name"=>250, "path_id"=>nil, "share_id"=>nil, "server_id"=>nil}, using: :btree
