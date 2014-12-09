@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  file_name: MyString
+  file_size_bytes: 1
+  path_id: 
+  share_id: 
+  server_id: 
+
+two:
+  file_name: MyString
+  file_size_bytes: 1
+  path_id: 
+  share_id: 
+  server_id: 

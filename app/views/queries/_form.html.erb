@@ -1,0 +1,37 @@
+<%= form_for(@query) do |f| %>
+  <% if @query.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@query.errors.count, "error") %> prohibited this query from being saved:</h2>
+
+      <ul>
+      <% @query.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :file_name %><br>
+    <%= f.text_field :file_name %>
+  </div>
+  <div class="field">
+    <%= f.label :file_size_bytes %><br>
+    <%= f.number_field :file_size_bytes %>
+  </div>
+  <div class="field">
+    <%= f.label :path_id %><br>
+    <%= f.text_field :path_id %>
+  </div>
+  <div class="field">
+    <%= f.label :share_id %><br>
+    <%= f.text_field :share_id %>
+  </div>
+  <div class="field">
+    <%= f.label :server_id %><br>
+    <%= f.text_field :server_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>File name:</strong>
+  <%= @query.file_name %>
+</p>
+
+<p>
+  <strong>File size bytes:</strong>
+  <%= @query.file_size_bytes %>
+</p>
+
+<p>
+  <strong>Path:</strong>
+  <%= @query.path %>
+</p>
+
+<p>
+  <strong>Share:</strong>
+  <%= @query.share %>
+</p>
+
+<p>
+  <strong>Server:</strong>
+  <%= @query.server %>
+</p>
+
+<%= link_to 'Edit', edit_query_path(@query) %> |
+<%= link_to 'Back', queries_path %>

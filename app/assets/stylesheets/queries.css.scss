@@ -1,0 +1,63 @@
+// Place all the styles related to the Queries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#index-header {
+	h1 {
+		font-size: 100px;
+		margin-bottom: 5px;
+	}
+	h2 {
+		margin-top: 1px;
+		font-size: 30px;
+	}
+	margin-top: 40px;
+	margin-bottom: 50px;
+}
+
+#search-header {
+	h1 {
+	font-size: 70px;
+	}
+}
+
+#explain {
+	margin: auto;
+	h3 {
+		font-size: 50px;
+	}
+}
+
+#search-field {
+	margin-bottom: 130px;
+}
+
+.table {
+	margin-top: 40px;
+}
+
+#explanation-text {
+	p {
+		margin-top: 2px;
+		margin-bottom: 2px;
+		font: Arial;
+		margin-top: 20px;
+		font-size: 14px;
+	}
+}
+
+#m2m-help {
+	h3 {
+		color: green;
+	}
+	p {
+		font-family: Arial;
+	}
+	margin-top: 5%;
+}
+
+#success {
+	margin-top: 40px;
+	color: green;
+}

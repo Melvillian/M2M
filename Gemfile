@@ -5,8 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
 gem 'mysql2', '~> 0.3.17'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -16,6 +15,10 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use to generate a schema.rb file out of the database pointed to in database.yml
 gem 'schema_to_scaffold', '0.7.2'
+
+# Use for twitter bootstrap
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

@@ -1,0 +1,46 @@
+<div id="main-container" class="container">
+<!--   <div class="row">
+    <div id="explanation-text">
+      <p>All this time you've been lied to, and M2M is your red pill to the truth. You may know a friend or three who've received cease and desist orders for illegally pirating files on Mudd's network. This is usually enough to dismay all but the most intrepid of piraters from downloading content on the Web. But unbeknownst to many (until now), there exists a number of student-owned file servers connected to Mudd's network. These perfectly legal file servers have been at your finger tips all along!</p>
+      <p>Humor me by imagining the following example, so we may more clearly see the need that M2M fulfills. Imagine you wish to download all the episodes of "Legend of Korra". You have a hunch it exists somewhere on the network, but where? In the best case you'll choose a server, for instance "monolith", connect to a share on that server, for instance Monolith's "Storage" share, and search through its Video folder for Korra episodes. But in the worst case, you search through the contents' of every server you know of and still don't find anything. Gah!</p>
+      <p>Enter M2M, playfully named after the file transfer method dubbed P2P (Peer 2 Peer). M2M searches through and indexes the contents of every server on Mudd's network, allowing you to quickly find the file(s) you need. Think of it like Google, but just for us Mudders! M2M's indexes are updated daily, so if you recently added a file to one of the servers and don't see it come up on M2M, don't worry!</p>
+      <p>Let's revisit the Korra example. With M2M, you can enter into the search bar something like "Korra", "Legend of", or "Legend of Korra", any of these will return the server, share name, and path of any files on the network that match the search term you entered. Now that you know what servers contain Legend of Korra files, you can connect to the server using one of the three following methods, depending on your operating system. See the bottom of this page for more detailed instructions </p>
+      <p>M2M is maintained by a current Mudder, but that Mudder will soon graduate. If the idea of open source software, building your own website using Ruby on Rails and Python, or just helping out your fellow Mudders (all reasons the current maintainer decided to revive M2M) ask around to find out who the current admin of M2M is, and they'll teach you and help you get involved. Enjoy!</p>
+    </div>
+  </div> -->
+  <div id="m2m-help">
+  <div class = "row">
+    <% if request.user_agent.include? 'Macintosh' then %>
+      <div class="col-md-2"></div>
+      <div id="explain" class="col-md-8 text-center">
+            <h3> Mac </h3>
+            <p> To connect to M2M using a Mac machine, first make sure you're connected to Claremont-WPA. Open the program you use to view files and folder (Finder) and press "Command + K". In the window that opens, type in</p>
+            <p><b>smb://<%= params[:server]%></b></p>
+            <p>Then log in as "Guest" and select the share named</p><p><b><%= params[:share]%></b></p><p> Finally, navigate to the file located at </p>
+            <p><b><%= params[:path]%></b></p>
+          </div>
+      <div class="col-md-2"></div>
+    <% elsif request.user_agent.include? 'Windows' then%>
+    <div class="col-md-2"></div>
+        <div id="explain" class="col-md-8 text-center">
+            <h3> Windows </h3>
+            <p>To connect to M2M using a Windows machine, first make sure you're connected to Claremont-WPA. Then click the Start menu in the bottom left portion of your desktop, search for "Run" and select the search result. In the window that appears type </p><p><b>smb://<%= params[:server]%></b></p> 
+            <p>Then log in as "Guest" and select the share named</p><p><b><%= params[:share]%></b></p><p> Finally, navigate to the file located at </p>
+            <p><b><%= params[:path]%></b></p>
+        </div>
+    <div class="col-md-2"></div>
+    <% else %>
+        <div class="col-md-2"></div>
+          <div id="explain" class="col-md-8 text-center">
+            <h3> Linux, Mobile?</h3>
+            <p>M2M can tell you're not on a Mac or Windows machine... so it'l guess that you're on Linux!</p><p> To connect to M2M on a Linux machine, use whichever package manager you like to download "smbclient" and read its manpage. Once you've got that installed, connect to </p><p><b><%= params[:server]%></b></p><p> and access the share named </p><p><b><%= params[:share]%></b></p><p>You'll find your file at </p><p><b><%= params[:path]%></b></p>
+          </div>
+
+        <div class="col-md-2"></div>
+    <% end %>
+
+</div>
+    </div>
+    </div>
+  </div>
+  </div>

@@ -1,0 +1,44 @@
+<div id="main-container" class="container">
+<!--   <div class = "row">
+        <div id="explain" class="col-md-4 text-center">
+            <h3> Windows </h3>
+            <p>To connect to M2M using a Windows machine, click the Start menu in the bottom left portion of your desktop, then search for and click "Run". In the window that appears type <b></p><p>"smb://name_of_server.st.hmc.edu"</b></p> 
+            <p>where name_of_server is the name of the server you wish to connect to. Give the server "tachyon" a try!</p>
+          </div>
+          <div id="explain" class="col-md-4 text-center">
+            <h3> Linux </h3>
+            <p>On Linux, use whichever package manager you like to download "smbclient" and read its manpage. If package manager doesn't provide smbclient, you probably don't need to be told how to access M2M! </p>
+          </div>
+          <div id="explain" class="col-md-4 text-center">
+            <h3> Mac </h3>
+            <p> To connect to M2M using a Mac machine, open the "Finder" program, and press "Command + K". In the window that opens, enter</p>
+            <p><b>"smb://name_of_server.st.hmc.edu"</b></p>
+            <p>where name_of_server is the name of the server you wish to connect to. Give the server "monolith" a try!</p>
+          </div>
+      </div>
+    </div> -->
+<table class='table' cellspacing="10">
+  <thead>
+    <tr class="text-center">
+      <th>Server</th>
+      <th>Root Folder</th>
+      <th class="text-center">Filepath</th>
+      <th colspan="10"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @queries.each do |result| %>
+      <% result.rows.each do |row| %>
+        <tr>
+          <td><%= row[0] %></td>
+          <td><%= row[1] %></td>
+          <td class="file-path"><%= link_to(row[2] + row[3], controller: "queries", action: "help", server: row[0], share: row[1], path: row[2] + row[3]) %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+</div>
