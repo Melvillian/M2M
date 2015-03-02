@@ -21,7 +21,7 @@
   <thead>
     <tr class="text-center">
       <th>Server</th>
-      <th>Root Folder</th>
+      <th>Share</th>
       <th class="text-center">Filepath</th>
       <th colspan="10"></th>
     </tr>
@@ -33,7 +33,7 @@
         <tr>
           <td><%= row[0] %></td>
           <td><%= row[1] %></td>
-          <td class="file-path"><%= link_to(row[2] + row[3], controller: "queries", action: "help", server: row[0], share: row[1], path: row[2] + row[3]) %></td>
+          <td class="file-path"><%= link_to(row[2] + row[3], url_for("smb://#{row[0]}/#{row[1]}"))%></td>
         </tr>
       <% end %>
     <% end %>

@@ -4,8 +4,6 @@ Rails.application.routes.draw do
 
   get '/queries', to: 'queries#search'
 
-  get '/queries/help', to: 'queries#help'
-
   resources :queries
 
 
